@@ -1,0 +1,244 @@
+.body{
+    background-color: yellow;
+    
+}
+nav{
+    
+    width: 100%;
+    background-color: gold;
+    border-bottom: red 2px solid;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding: 10px;
+    
+    
+}
+.car img{
+    width: 100%;
+    height: auto;
+    
+}
+.yellow{
+    background-color: greenyellow;
+    font-size: 75px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.blanco{
+    text-decoration: none;
+    background-color: red;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.blanco:hover{
+    background-color: white;
+}
+.anuncionos{
+    background-color: white;
+    height: 520px;
+}
+
+.centro{
+    display: grid;
+    grid-template-columns: auto;
+}
+.centro div{
+    margin-left: auto;
+    margin-right: auto;
+}
+#centro2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#centro2 div{
+    margin-left: auto;
+    margin-right: auto;
+}
+.ri{
+    margin-left: auto;
+}
+.le{
+    margin-right: auto;
+}
+.ce{
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    font-size: 300%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.intro{
+    
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#muestra{
+    width: 300px;
+}
+.pie{
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    
+}
+.pie div{
+    
+    margin-top: 30px;
+   
+}
+#for1{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 420px;
+    height: 225px;
+    background-color: gold;
+    border: red 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+#for1 div{
+    padding: 5px;
+}
+.datos{
+    font-size: 150%;
+}
+#for2{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 400px;
+    height: 535px;
+    background-color: gold;
+    border: red 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+#for2 div{
+    padding: 5px;
+}
+form{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nosotros{
+    text-align: justify;
+    padding: 10px;
+    background-color: orange;
+    border: red 2px solid;
+    
+    height: max-content;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.caja{
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fight{
+    padding-left: 10px;
+}
+
+.accion{
+    width: 100%;
+
+}
+.anuncio1{
+    padding: 0%;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.anuncio1 div{
+    padding: 0%;
+}
+.anuncio3{
+    padding: 0%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.anuncio3 div{
+    padding: 0%;
+}
+.pad0{
+    padding: 0%;
+}
+iframe{
+    height: 250px; 
+    width: 365px;
+}
+.titulo{
+    display: grid;
+    grid-template-columns: 100px auto ;
+}
+.footer{
+    background-color: gold;
+    width: 100%;
+    height: 175px;
+    position: absolute;
+    border-top: red 2px solid;
+    font-family: 'Times New Roman', Times, serif; 
+    padding-top: 10px;
+   
+}
+.accion2{
+    height: 175px;
+}
+.accion2:hover{
+    transform: scale(1.5);
+    
+}
+#otro{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    width: 100%;
+    padding: 10px;
+    background-color: greenyellow;
+    border: red 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+#otro div{
+    color: red;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 110%;
+    text-align: center;
+}
+.black{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bb{
+    width: 110px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+}
+.bb:hover{
+    background-color: red;
+}
+.gradient{
+    background: linear-gradient(-45deg,yellow,orange,red);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    box-shadow: 0px 0px 20px black;
+
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

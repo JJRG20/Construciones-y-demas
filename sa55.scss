@@ -1,0 +1,253 @@
+@import "index";
+@mixin fontStyle{
+    color: red;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 110%;
+    text-align: center;
+}
+
+$color1: yellow;
+$color2: red;
+$color3: greenyellow;
+$color4: gold;
+$color5: orange;
+$color6: white;
+$color7: blue;
+$color8: black;
+
+$size1: auto;
+$size2: 100%;
+$size3: 80%;
+$size4: 300px;
+$size5: 420px;
+$size6: 400px;
+$size7: 200px;
+$size8: 90%;
+$size9: 365px;
+$size10: 110px;
+$size11: 520px;
+$size12: 225px;
+$size13: 535px;
+$size14: max-content;
+$size15: 250px;
+$size16: 175px;
+$size17: 40px;
+$size18: 2px;
+$size19: 10px;
+$size20: 75px;
+$size21: 8px;
+$size22: 300%;
+$size23: 40%;
+$size24: 20%;
+$size25: 30px;
+$size26: 5px;
+$size27: 150%;
+$size28: 15%;
+$size29: 0%;
+$size30: 100px;
+$size31: 110%;
+$size32: 400%;
+$size33: 0px;
+$size34: 20px;
+$size35: 50%;
+
+$font1: Arial, Helvetica, sans-serif; 
+$font2: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$font3: 'Times New Roman', Times, serif; 
+$font4: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+.body{
+    background-color: $color1;
+}
+
+.blanco{
+    text-decoration: none;
+    background-color: $color2;
+    border-radius: $size21;
+    margin-right: $size19;
+    font-family: $font2;
+}
+.blanco:hover{
+    background-color: $color6;
+}
+
+.titulo{
+    display: grid;
+    grid-template-columns: $size30 auto ;
+}
+
+.footer{
+    background-color: $color4;
+    width: $size2;
+    height: $size16;
+    position: absolute;
+    border-top: $color2 $size18 solid;
+    font-family: $font3;
+    padding-top: $size19;
+   
+}
+
+.pie{
+    display: grid;
+    grid-template-columns: $size23 $size24 $size23;
+    div{
+        margin-top: $size25;
+    }
+   
+}
+
+.ri{
+    margin-left: $size1;
+}
+.le{
+    margin-right: $size1;
+}
+.ce{
+    margin-left: $size1;
+    margin-right: $size1;
+}
+h1{
+    font-size: $size22;
+    font-family: $font4;
+}
+
+
+.anuncio3{
+    padding: 0%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.anuncio3 div{
+    padding: 0%;
+}
+.pad0{
+    padding: 0%;
+}
+
+.accion2{
+    height: 175px;
+}
+.accion2:hover{
+    transform: scale(1.5);
+    
+}
+#otro{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    width: 100%;
+    padding: 10px;
+    background-color: greenyellow;
+    border: red 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+#otro div{
+    @include fontStyle();
+}
+.black{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bb{
+    width: 110px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+}
+.bb:hover{
+    background-color: red;
+}
+#for1{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 420px;
+    height: 225px;
+    background-color: gold;
+    border: red 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+#for1 div{
+    padding: 5px;
+}
+.datos{
+    font-size: 150%;
+}
+#for2{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 400px;
+    height: 535px;
+    background-color: gold;
+    border: red 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+#for2 div{
+    padding: 5px;
+}
+form{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nosotros{
+    text-align: justify;
+    padding: 10px;
+    background-color: orange;
+    border: red 2px solid;
+    
+    height: max-content;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.caja{
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fight{
+    padding-left: 10px;
+}
+
+.accion{
+    width: 100%;
+
+}
+nav{
+    
+    width: 100%;
+    background-color: gold;
+    border-bottom: red 2px solid;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding: 10px;
+    
+    
+}
+.car img{
+    width: 100%;
+    height: auto;
+    
+}
+.gradient{
+    background: linear-gradient(-45deg,yellow,orange,red);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    box-shadow: 0px 0px 20px black;
+
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

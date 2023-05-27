@@ -35,7 +35,7 @@ $row=mysqli_fetch_array($query);
                     <ul class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item blanco" href="Index.html">Página principal</a></li>
                         <li><a class="dropdown-item blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a></li>
-                        <li><a class="dropdown-item blanco" href="Registro.html">Registrarse</a></li>
+                        <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/formPHP/usuario1.php">Registrarse</a></li>
                         <li><a class="dropdown-item blanco" href="Nosotros.html">Nosotros</a></li>
                     </ul>
                 </div>
@@ -97,7 +97,7 @@ $row=mysqli_fetch_array($query);
                             </div>
                             
                             <button type="submit" class="bb btn btn-danger justify-content-end">Login</button>
-                            <a href="Registro.html" class="bb btn btn-danger justify-content-end">Registrarse</a>
+                            <a href="http://localhost/Consdemas/formPHP/usuario1.php" class="bb btn btn-danger justify-content-end">Registrarse</a>
                             
                         </div>
                         

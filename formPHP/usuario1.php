@@ -33,10 +33,10 @@ $row=mysqli_fetch_array($query);
                         |||
                     </button>
                     <ul class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item blanco" href="Index.html">Página principal</a></li>
+                        <li><a class="dropdown-item blanco" href="http://127.0.0.1:5500/htdocs/Consdemas/Index.html">Página principal</a></li>
                         <li><a class="dropdown-item blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a></li>
                         <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/formPHP/usuario1.php">Registrarse</a></li>
-                        <li><a class="dropdown-item blanco" href="Nosotros.html">Nosotros</a></li>
+                        <li><a class="dropdown-item blanco" href="http://127.0.0.1:5500/htdocs/Consdemas/Nosotros.html">Nosotros</a></li>
                     </ul>
                 </div>
                 <div class="container-fluid">
@@ -44,13 +44,13 @@ $row=mysqli_fetch_array($query);
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link blanco" aria-current="page" href="Index.html">Página principal</a>
+                                <a class="nav-link blanco" aria-current="page" href="http://127.0.0.1:5500/htdocs/Consdemas/Index.html">Página principal</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link blanco" href="Nosotros.html">Nosotros</a>
+                                <a class="nav-link blanco" href="http://127.0.0.1:5500/htdocs/Consdemas/Nosotros.html">Nosotros</a>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +62,7 @@ $row=mysqli_fetch_array($query);
     <br>
 
     <div class="titulo">
-        <a class="p-2" title="Construcciones y demás" href="Index.html">
+        <a class="p-2" title="Construcciones y demás" href="http://127.0.0.1:5500/htdocs/Consdemas/Index.html">
             <img src="Img_página/Brick.png" alt="Construcciones y demás"></a>
             <div transition-style="in:wipe:left">
                 <h1 class="p-4"><b>Construcciones y demás</b></h1>

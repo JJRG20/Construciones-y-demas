@@ -132,7 +132,7 @@ $row=mysqli_fetch_array($query);
         <div><input type="date" class="form-control" id="date" name="Fecha_nac" required></div>
         <div><label for="sexo" class="form-label">Sexo:</label></div>
         <div><input list="Sexo" class="form-control" name="Sexo" required>
-            <datalist id="sexo">
+            <datalist id="Sexo">
                 <option>Masculino</option>
                 <option>Femenino</option>
                 <option>Otro</option>
@@ -140,7 +140,7 @@ $row=mysqli_fetch_array($query);
         </div>
         <div><label for="marca" class="form-label">Marca favorita:</label></div>
         <div><input list="Marca" class="form-control"  name="Marca_fav" required>
-            <datalist id="marca">
+            <datalist id="Marca">
                 <option>Lego</option>
                 <option>Megablox</option>
                 <option>Kre-o</option>

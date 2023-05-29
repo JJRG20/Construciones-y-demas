@@ -17,7 +17,7 @@ $marca=$_POST['Marca_fav'];
 
 
 
-$sql="UPDATE usuarios1 SET Nombres='$nombres',Apellidos='$apellidos',Nombre_us='$usuario',Password='$password',Email='$email',Fono='$fono',Direccion='$direccion',Fecha_nac='$fecha',Sexo='$sexo',Marca_fav='$marca' WHERE Num='$num'";
+$sql="UPDATE usuarios1 SET Nombres='$nombres',Apellidos='$apellidos',Nombre_us='$usuario',Password='$password',Email='$email',Fono='$fono',Direccion='$direccion',Fecha_nac='$fecha',Sexo='$sexo',Marca_fav='$marca' WHERE Nombre_us='$usuario'";
 $query=mysqli_query($conexion,$sql);
 
     if($query){

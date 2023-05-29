@@ -45,15 +45,16 @@ $row=mysqli_fetch_array($query);
                                                 <th><?php  echo $row['Email']?></th> 
                                                 <th><?php  echo $row['Marca_fav']?></th> 
                                                 <th><a href="actualiza1.php?id=<?php echo $row['Nombre_us'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="borrar1.php?id=<?php echo $row['Nombre_us'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
-                                            </tr>
+                                                <th><a href="borrar1.php?id=<?php echo $row['Nombre_us'] ?>" class="btn btn-danger">Eliminar</a></th>
                                         <?php 
                                             }
                                         ?>
                                 </tbody>
                             </table>
                         </div>
-                    </div>  
+                    </div>
+                      
             </div>
+            
 </body>
 </html>

@@ -28,6 +28,7 @@ $row=mysqli_fetch_array($query);
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
+                                        <th>Id</th>
                                         <th>Usuario</th>
                                         <th>Correo</th>
                                         <th>Marca favorita</th>
@@ -41,6 +42,7 @@ $row=mysqli_fetch_array($query);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
                                             <tr>
+                                                <th><?php  echo $row['Num']?></th>
                                                 <th><?php  echo $row['Nombre_us']?></th>
                                                 <th><?php  echo $row['Email']?></th> 
                                                 <th><?php  echo $row['Marca_fav']?></th> 

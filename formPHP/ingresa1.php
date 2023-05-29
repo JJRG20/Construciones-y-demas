@@ -2,6 +2,7 @@
 include("conexion1.php");
 $conexion=conectar();
 
+$id=$_POST['Id'];
 $nombres=$_POST['Nombres'];
 $apellidos=$_POST['Apellidos'];
 $usuario=$_POST['Nombre_us'];
@@ -14,7 +15,7 @@ $sexo=$_POST['Sexo'];
 $marca=$_POST['Marca_fav'];
 
 
-$sql="INSERT INTO usuarios1 VALUES('$nombres','$apellidos','$usuario','$password','$email','$fono','$direccion','$fecha','$sexo','$marca')";
+$sql="INSERT INTO usuarios1 VALUES('$id','$nombres','$apellidos','$usuario','$password','$email','$fono','$direccion','$fecha','$sexo','$marca')";
 $query= mysqli_query($conexion,$sql);
 
 if($query){

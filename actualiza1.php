@@ -32,6 +32,7 @@ $row=mysqli_fetch_array($query);
                                 <input type="password" class="form-control mb-3" name="Password" placeholder="Contraseña" value="<?php echo $row['Password']  ?>">
                                 <input type="email" class="form-control mb-3" name="Email" placeholder="Email" value="<?php echo $row['Email']  ?>">
                                 <input type="tel" class="form-control mb-3" name="Fono" placeholder="Teléfono" value="<?php echo $row['Fono']  ?>">
+                                <input type="text" class="form-control mb-3" name="Direccion" placeholder="Dirección" value="<?php echo $row['Direccion']  ?>">
                                 <input type="date" class="form-control mb-3" name="Fecha_nac" placeholder="Fecha de nacimiento" value="<?php echo $row['Fecha_nac']  ?>">
                                 <input list="Sexo" class="form-control mb-3" name="Sexo" placeholder="Sexo" value="<?php echo $row['Sexo']  ?>">
                                     <datalist id="Sexo">

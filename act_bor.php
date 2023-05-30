@@ -29,9 +29,16 @@ $row=mysqli_fetch_array($query);
                                 <thead class="table-success table-striped" >
                                     <tr>
                                         <th>Id</th>
+                                        <th>Nombres</th>
+                                        <th>Apellidos</th>
                                         <th>Usuario</th>
-                                        <th>Correo</th>
-                                        <th>Marca favorita</th>
+                                        <th>Contraseña</th>
+                                        <th>Email</th>
+                                        <th>Fono</th>
+                                        <th>Dirección</th>
+                                        <th>Fecha_nacimiento</th>
+                                        <th>Sexo</th>
+                                        <th>Marca_favorita</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -43,9 +50,16 @@ $row=mysqli_fetch_array($query);
                                         ?>
                                             <tr>
                                                 <th><?php  echo $row['Num']?></th>
+                                                <th><?php  echo $row['Nombres']?></th>
+                                                <th><?php  echo $row['Apellidos']?></th>
                                                 <th><?php  echo $row['Nombre_us']?></th>
+                                                <th><?php  echo $row['Password']?></th>
                                                 <th><?php  echo $row['Email']?></th> 
-                                                <th><?php  echo $row['Marca_fav']?></th> 
+                                                <th><?php  echo $row['Fono']?></th>
+                                                <th><?php  echo $row['Direccion']?></th>
+                                                <th><?php  echo date("d-m-Y",strtotime($row['Fecha_nac']));?></th>
+                                                <th><?php  echo $row['Sexo']?></th>
+                                                <th><?php  echo $row['Marca_fav']?></th>  
                                                 <th><a href="actualiza1.php?id=<?php echo $row['Nombre_us'] ?>" class="btn btn-info">Editar</a></th>
                                                 <th><a href="borrar1.php?id=<?php echo $row['Nombre_us'] ?>" class="btn btn-danger">Eliminar</a></th>
                                         <?php 

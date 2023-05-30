@@ -60,8 +60,8 @@ $row=mysqli_fetch_array($query);
                                                 <th><?php  echo date("d-m-Y",strtotime($row['Fecha_nac']));?></th>
                                                 <th><?php  echo $row['Sexo']?></th>
                                                 <th><?php  echo $row['Marca_fav']?></th>  
-                                                <th><a href="actualiza1.php?id=<?php echo $row['Nombre_us'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="borrar1.php?id=<?php echo $row['Nombre_us'] ?>" class="btn btn-danger">Eliminar</a></th>
+                                                <th><a href="actualiza1.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></th>
+                                                <th><a href="borrar1.php?id=<?php echo $row['Num'] ?>" class="btn btn-danger">Eliminar</a></th>
                                         <?php 
                                             }
                                         ?>

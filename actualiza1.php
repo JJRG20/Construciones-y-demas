@@ -2,9 +2,9 @@
     include("conexion1.php");
     $conexion=conectar();
 
-$usuario=$_GET['id'];
+$num=$_GET['id'];
 
-$sql="SELECT * FROM usuarios1 WHERE Nombre_us='$usuario'";
+$sql="SELECT * FROM usuarios1 WHERE Num='$num'";
 $query=mysqli_query($conexion,$sql);
 
 $row=mysqli_fetch_array($query);
@@ -24,7 +24,7 @@ $row=mysqli_fetch_array($query);
                 <div class="container mt-5">
                     <form action="up1.php" method="POST">
                     
-                                <input type="hidden" name="Nombre_us" value="<?php echo $row['Nombre_us']  ?>">
+                                <input type="hidden" name="Num" value="<?php echo $row['Num']  ?>">
                                 
                                 <input type="text" class="form-control mb-3" name="Nombres" placeholder="Nombres" value="<?php echo $row['Nombres']  ?>">
                                 <input type="text" class="form-control mb-3" name="Apellidos" placeholder="Apellidos" value="<?php echo $row['Apellidos']  ?>">

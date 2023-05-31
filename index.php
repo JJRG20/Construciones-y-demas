@@ -7,6 +7,7 @@ $sql="SELECT * FROM usuarios1";
 $query=mysqli_query($conexion,$sql);
 
 $row=mysqli_fetch_array($query);
+error_reporting(0);
 $nom=$_SESSION['Nombre_us'];
 
 ?>
@@ -34,7 +35,19 @@ $nom=$_SESSION['Nombre_us'];
                     </button>
                     <ul class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/index.php">Página principal</a></li>
-                        <li><a class="dropdown-item blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a></li>
+                        <li>
+                            <?php
+                            if($nom){ ?>
+                                <li><a class="dropdown-item blanco" aria-current="page" href="logout.php">Cerrar sesión</a></li>
+                            
+                            <?php }else{ ?>
+                                <li>
+                                    <a class="dropdown-item blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a>
+                                </li>
+                            <?php } ?>
+                            
+                        
+                        </li>
                         <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/usuario1.php">Registrarse</a></li>
                         <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/nosotros.php">Nosotros</a></li>
                     </ul>
@@ -53,11 +66,21 @@ $nom=$_SESSION['Nombre_us'];
                             <li class="nav-item">
                                 <a class="nav-link blanco" aria-current="page" href="http://localhost/Consdemas/index.php">Página principal</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link blanco" href="http://localhost/Consdemas/nosotros.php">Nosotros</a>
+                            <li>
+                                <?php
+                                if($nom){ ?>
+                                    <li class="nav-item"><a class="nav-link blanco" aria-current="page" href="logout.php">Cerrar sesión</a></li>
+                                
+                                <?php }else{ ?>
+                                    <li class="nav-item">
+                                        <a class="nav-link blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a>
+                                    </li>
+                                <?php } ?>
+                                
+                            
                             </li>
                         </ul>
                     </div>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("conexion1.php");
 $conexion=conectar();
 $usuario=$_POST['Nombre_us'];

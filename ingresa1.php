@@ -20,7 +20,7 @@ $sql="INSERT INTO usuarios1 VALUES('$num','$nombres','$apellidos','$usuario','$p
 $query= mysqli_query($conexion,$sql);
 
 if($query){
-    Header("Location: usuario1.php");
+    Header("Location: index.php");
     
 }
 else {

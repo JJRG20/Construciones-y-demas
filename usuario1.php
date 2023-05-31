@@ -71,7 +71,6 @@ $nom=$_SESSION['Nombre_us'];
                             
                             <li class="nav-item">
                                 <a class="nav-link blanco" href="http://localhost/Consdemas/nosotros.php">Nosotros</a>
-                            </li>
                             <li>
                                 <?php
                                 if($nom){ ?>
@@ -110,16 +109,16 @@ $nom=$_SESSION['Nombre_us'];
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="login.php" method=POST>
+                    <form action="validar.php" method=POST>
                         <div class="form-group">
                             <div class="mb-3">
                                 <label for="usuario" class="form-label">Nombre de usuario:</label>
-                                <input type="text" class="form-control" id="usuario" name="user" required>
+                                <input type="text" class="form-control" id="usuario" name="Nombre_us" required>
                             </div>
                             
                             <div class="mb-3">
                                 <label for="contraseña" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="contraseña" name="password" minlength="8" required>
+                                <input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required>
                             </div>
                             
                             <div><a href="#">¿Olvidó su contraseña?</a></div>

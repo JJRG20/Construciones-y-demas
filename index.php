@@ -44,11 +44,12 @@ $nom=$_SESSION['Nombre_us'];
                                 <li>
                                     <a class="dropdown-item blanco" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder</a>
                                 </li>
+                                <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/usuario1.php">Registrarse</a></li>
                             <?php } ?>
                             
                         
                         </li>
-                        <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/usuario1.php">Registrarse</a></li>
+                        
                         <li><a class="dropdown-item blanco" href="http://localhost/Consdemas/nosotros.php">Nosotros</a></li>
                     </ul>
                 </div>

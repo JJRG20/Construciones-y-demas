@@ -21,6 +21,6 @@ $sql="UPDATE usuarios1 SET Nombres='$nombres',Apellidos='$apellidos',Nombre_us='
 $query=mysqli_query($conexion,$sql);
 
     if($query){
-        Header("Location: act_bor.php");
+        Header("Location: buscar1.php");
     }
 ?>

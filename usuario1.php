@@ -78,7 +78,7 @@ $row=mysqli_fetch_array($query);
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="login.php" method=POST>
                         <div class="form-group">
                             <div class="mb-3">
                                 <label for="usuario" class="form-label">Nombre de usuario:</label>

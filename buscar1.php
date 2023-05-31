@@ -53,6 +53,7 @@ $conexion=conectar();
                 <th>Fecha_nacimiento</th>
                 <th>Sexo</th>
                 <th>Marca_favorita</th>
+                <th>Administrador</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -90,6 +91,7 @@ $conexion=conectar();
                         <td><?php  echo date("d-m-Y",strtotime($row['Fecha_nac']));?></td>
                         <td><?php  echo $row['Sexo']?></td>
                         <td><?php  echo $row['Marca_fav']?></td> 
+                        <td><?php  echo $row['adm']?></td> 
                         <td><a href="actualiza1.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></td>
                         <td><a href="borrar1.php?id=<?php echo $row['Num'] ?>" class="btn btn-danger">Eliminar</a></td>
     
@@ -113,6 +115,7 @@ $conexion=conectar();
                     <td><?php  echo date("d-m-Y",strtotime($row['Fecha_nac']));?></td>
                     <td><?php  echo $row['Sexo']?></td>
                     <td><?php  echo $row['Marca_fav']?></td> 
+                    <td><?php  echo $row['adm']?></td> 
                     <td><a href="actualiza1.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></td>
                     <td><a href="borrar1.php?id=<?php echo $row['Num'] ?>" class="btn btn-danger">Eliminar</a></td>
 

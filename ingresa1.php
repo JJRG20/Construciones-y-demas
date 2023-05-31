@@ -13,9 +13,10 @@ $direccion=$_POST['Direccion'];
 $fecha=$_POST['Fecha_nac'];
 $sexo=$_POST['Sexo'];
 $marca=$_POST['Marca_fav'];
+$adm=$_POST['adm'];
 
 
-$sql="INSERT INTO usuarios1 VALUES('$num','$nombres','$apellidos','$usuario','$password','$email','$fono','$direccion','$fecha','$sexo','$marca')";
+$sql="INSERT INTO usuarios1 VALUES('$num','$nombres','$apellidos','$usuario','$password','$email','$fono','$direccion','$fecha','$sexo','$marca','$adm')";
 $query= mysqli_query($conexion,$sql);
 
 if($query){

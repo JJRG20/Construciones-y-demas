@@ -150,10 +150,21 @@ $nom=$_SESSION['Nombre_us'];
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="http://localhost/Consdemas/usuario1.php" ><img src="Img_página/únete.jpg" class="d-block w-80" alt="Regístrate"></a> 
+                    <?php
+                    if($nom){ ?>
+                        <a href="http://localhost/Consdemas/index.php" ><img src="Img_página/únete.jpg" class="d-block w-80" alt="Ya estás registrado"></a>
+                    <?php }else{ ?>
+                        <a href="http://localhost/Consdemas/usuario1.php" ><img src="Img_página/únete.jpg" class="d-block w-80" alt="Regístrate"></a> 
+                    <?php } ?>
+                    
                 </div>
                 <div class="carousel-item">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="Img_página/log.jpg" class="d-block w-80" alt="Login"></a>
+                    <?php
+                    if($nom){ ?>
+                        <a href="http://localhost/Consdemas/index.php" ><img src="Img_página/log.jpg" class="d-block w-80" alt="Ya estás en sesión"></a>
+                    <?php }else{ ?>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="Img_página/log.jpg" class="d-block w-80" alt="Login"></a>
+                    <?php } ?>
                     
                 </div>
             

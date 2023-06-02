@@ -155,16 +155,20 @@ $nom=$_SESSION['Nombre_us'];
         <div><input type="text" class="form-control" id="usuario" name="Nombre_us" required></div>
         <div><label for="contraseña" class="form-label">Contraseña:</label></div>
         <div><input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required></div>
-        <div><label for="email" class="form-label">Email:</label></div>
-        <div><input type="email" class="form-control" id="email" name="Email" required></div>
-        <div><label for="telefono" class="form-label">Teléfono:</label>
-            <input list="Cod" class="form-control" name="Cod" placeholder="Código" required>
-            <datalist id="Cod">
-                <option>+56</option>
-                
+        <div><label for="pre" class="form-label">Pregunta:</label></div>
+        <div><input list="Pre" class="form-control" name="Pre" placeholder="Para tu contraseña..." required>
+            <datalist id="Pre">
+                <option>¿Cuál es tu comida favorita?</option>
+                <option>¿Cuál es el nombre de tu mascota?</option>
+                <option>¿Cuál es tu película favorita?</option>
             </datalist>
         </div>
-        <div><input type="tel" class="form-control" id="telefono" name="Fono" placeholder="Número" required></div>
+        <div><label for="res" class="form-label">Respuesta:</label></div>
+        <div><input type="text" class="form-control" id="res" name="Res" required></div>
+        <div><label for="email" class="form-label">Email:</label></div>
+        <div><input type="email" class="form-control" id="email" name="Email" required></div>
+        <div><label for="telefono" class="form-label">Teléfono:</label></div>
+        <div><input type="tel" class="form-control" id="telefono" name="Fono" placeholder="(Código de área) Número" required></div>
         <div><label for="direccion" class="form-label">Dirección:</label></div>
         <div><input type="text" class="form-control" id="direccion" name="Direccion" required></div>
         <div><label for="date" class="form-label">Fecha de nacimiento:</label></div>

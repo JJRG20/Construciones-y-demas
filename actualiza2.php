@@ -1,16 +1,18 @@
-<?php
+<?php 
 session_start();
 include("conexion1.php");
 $conexion=conectar();
 
-$sql="SELECT * FROM usuarios1";
+$num=$_GET['id'];
+
+$sql="SELECT * FROM usuarios1 WHERE Num='$num'";
 $query=mysqli_query($conexion,$sql);
 
 $row=mysqli_fetch_array($query);
 error_reporting(0);
 $nom=$_SESSION['Nombre_us'];
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +26,7 @@ $nom=$_SESSION['Nombre_us'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    
 </head>
 <body class="body">
     <div class="sticky-top">
@@ -60,7 +63,7 @@ $nom=$_SESSION['Nombre_us'];
                             <li>
                                 <?php
                                 if($nom){ ?>
-                                    <li><a class="nav-link yo" aria-current="page" href="#"><?php echo $nom ?> </a></li>
+                                    <li><a class="nav-link yo" aria-current="page" href="http://localhost/Consdemas/perfil.php"><?php echo $nom ?> </a></li>
                                 <?php } ?>
                                 
                             </li>
@@ -137,39 +140,46 @@ $nom=$_SESSION['Nombre_us'];
              
             </div>
         </div>
-    </div><br><br>
+    </div>
 
-
-    <div class="perfil">
-        <h2>Mi perfil</h2><br>
-        <div id="for3">
-            
-            <?php
-            $sql="SELECT * FROM usuarios1 WHERE Nombre_us='$nom'";
-            $query=mysqli_query($conexion,$sql);
-            while($row=mysqli_fetch_array($query)){
-                ?>
-                    
-                    <div class="my"><p>Nombre:</p></div>
-                    <div class="my"><?php  echo $row['Nombre_us']?></div>
-                    <div class="my"><p>Correo:</p></div>
-                    <div class="my"><?php  echo $row['Email']?></div>
-                    <div class="my"><p>Teléfono:</p></div>
-                    <div class="my"><?php  echo $row['Fono']?></div>
-                    <div class="my"><p>Marca favorita:</p></div>
-                    <div class="my"><?php  echo $row['Marca_fav']?></div>
-                    <div></div>
-                    <div class="ri"><a href="actualiza2.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></div>
-                    
-
-                    
-                <?php 
-            } ?>
-        </div>
+    <div class="container mt-5">
+        <form action="up1.php" id="for4" method="POST">
         
-    </div><br><br>
-    
-    
+                    <input type="hidden" name="Num" value="<?php echo $row['Num']  ?>">
+                    
+                    <input type="text" class="form-control mb-3" name="Nombres" placeholder="Nombres" value="<?php echo $row['Nombres']  ?>" required>
+                    <input type="text" class="form-control mb-3" name="Apellidos" placeholder="Apellidos" value="<?php echo $row['Apellidos']  ?>" required>
+                    <input type="text" class="form-control mb-3" name="Nombre_us" placeholder="Nombre de usuario" value="<?php echo $row['Nombre_us']  ?>" required>
+                    <input type="password" class="form-control mb-3" name="Password" placeholder="Contraseña" value="<?php echo $row['Password']  ?>" required>
+                    <input type="text" class="form-control mb-3" name="Email" placeholder="Email" value="<?php echo $row['Email']  ?>" required>
+                    <div><input list="Pre" class="form-control mb-3" name="Pre" placeholder="Para tu contraseña..." value="<?php echo $row['Pre']  ?>" required>
+                        <datalist id="Pre">
+                            <option>¿Cuál es tu comida favorita?</option>
+                            <option>¿Cuál es el nombre de tu mascota?</option>
+                            <option>¿Cuál es tu película favorita?</option>
+                        </datalist>
+                    </div>
+                    <input type="text" class="form-control mb-3" name="Res" placeholder="Respuesta" value="<?php echo $row['Res']  ?>" required>
+                    <input type="tel" class="form-control mb-3" name="Fono" placeholder="Teléfono" value="<?php echo $row['Fono']  ?>" required>
+                    <input type="text" class="form-control mb-3" name="Direccion" placeholder="Dirección" value="<?php echo $row['Direccion']  ?>" required>
+                    <input type="date" class="form-control mb-3" name="Fecha_nac" placeholder="Fecha de nacimiento" value="<?php echo $row['Fecha_nac']  ?>" required>
+                    <input list="Sexo" class="form-control mb-3" name="Sexo" placeholder="Sexo" value="<?php echo $row['Sexo']  ?>" required>
+                        <datalist id="Sexo">
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                            <option>Otro</option>
+                        </datalist>
+                    <input list="Marca" class="form-control mb-3" name="Marca_fav" placeholder="Marca favorita" value="<?php echo $row['Marca_fav']  ?>" required>
+                        <datalist id="Marca">
+                            <option>Lego</option>
+                            <option>Megablox</option>
+                            <option>Kre-o</option>
+                            <option>Otra</option>
+                        </datalist>
+            <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
+        </form>
+        
+    </div><br>ç<br>
     <div class="card anuncio1">
         <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">
             <img src="Img_página/Elsword.png" class="card-img-top" alt="Elsword"></a>

@@ -140,20 +140,20 @@ $nom=$_SESSION['Nombre_us'];
     <div class="perfil">
         <h2>Mi perfil</h2><br>
         <div class="formy">
-        <?php
-        $sql="SELECT * FROM usuarios1 WHERE Nombre_us='$nom'";
-        $query=mysqli_query($conexion,$sql);
-        while($row=mysqli_fetch_array($query)){
-            ?>
-                
-                
-                <div class="my"><?php  echo $row['Nombre_us']?></div>
-                
+            <?php
+            $sql="SELECT * FROM usuarios1 WHERE Nombre_us='$nom'";
+            $query=mysqli_query($conexion,$sql);
+            while($row=mysqli_fetch_array($query)){
+                ?>
+                    
+                    
+                    <div class="my"><?php  echo $row['Nombre_us']?></div>
+                    
 
-                
-            <?php 
-        } ?>
-        
+                    
+                <?php 
+            } ?>
+        </div>
         
     </div><br><br>
     

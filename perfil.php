@@ -59,7 +59,7 @@ $nom=$_SESSION['Nombre_us'];
                             <li>
                                 <?php
                                 if($nom){ ?>
-                                    <li><a class="nav-link blanco" aria-current="page" href="#"><?php echo $nom ?> </a></li>
+                                    <li><a class="nav-link yo" aria-current="page" href="#"><?php echo $nom ?> </a></li>
                                 <?php } ?>
                                 
                             </li>
@@ -137,13 +137,26 @@ $nom=$_SESSION['Nombre_us'];
             </div>
         </div>
     </div><br><br>
-    <h2>Mi perfil</h2><br>
-    <?php
-    if($nom){ ?>
-        <?php  echo $row['Nombre_us']?>
+    <div class="perfil">
+        <h2>Mi perfil</h2><br>
+        <div class="formy">
+        <?php
+        $sql="SELECT * FROM usuarios1 WHERE Nombre_us='$nom'";
+        $query=mysqli_query($conexion,$sql);
+        while($row=mysqli_fetch_array($query)){
+            ?>
+                
+                
+                <div class="my"><?php  echo $row['Nombre_us']?></div>
+                
+
+                
+            <?php 
+        } ?>
+        
+        
+    </div><br><br>
     
-    <?php }
-    ?>
     
     <div class="card anuncio1">
         <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">

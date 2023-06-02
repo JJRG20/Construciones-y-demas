@@ -62,7 +62,7 @@ $nom=$_SESSION['Nombre_us'];
                             <li>
                                 <?php
                                 if($nom){ ?>
-                                    <li><a class="nav-link blanco" aria-current="page" href="http://localhost/Consdemas/perfil.php"><?php echo $nom ?> </a></li>
+                                    <li><a class="nav-link yo" aria-current="page" href="http://localhost/Consdemas/perfil.php"><?php echo $nom ?> </a></li>
                                 <?php } ?>
                                 
                             </li>

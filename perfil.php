@@ -137,9 +137,12 @@ $nom=$_SESSION['Nombre_us'];
             </div>
         </div>
     </div><br><br>
+
+
     <div class="perfil">
         <h2>Mi perfil</h2><br>
         <div class="formy">
+            
             <?php
             $sql="SELECT * FROM usuarios1 WHERE Nombre_us='$nom'";
             $query=mysqli_query($conexion,$sql);
@@ -148,6 +151,10 @@ $nom=$_SESSION['Nombre_us'];
                     
                     
                     <div class="my"><?php  echo $row['Nombre_us']?></div>
+                    <div class="my"><?php  echo $row['Email']?></div>
+                    <div class="my"><?php  echo $row['Fono']?></div>
+                    <div class="my"><?php  echo $row['Marca_fav']?></div>
+                    <div><a href="actualiza1.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></div>
                     
 
                     

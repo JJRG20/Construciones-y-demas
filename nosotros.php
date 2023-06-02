@@ -117,7 +117,7 @@ $nom=$_SESSION['Nombre_us'];
                             
                             <div class="mb-3">
                                 <label for="contraseña" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required>
+                                <input type="password" class="form-control" id="contraseña" name="Password" required>
                             </div>
                             
                             <div><a href="#">¿Olvidó su contraseña?</a></div>

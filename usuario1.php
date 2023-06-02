@@ -154,7 +154,7 @@ $nom=$_SESSION['Nombre_us'];
         <div><label for="usuario" class="form-label">Nombre de usuario:</label></div>
         <div><input type="text" class="form-control" id="usuario" name="Nombre_us" required></div>
         <div><label for="contraseña" class="form-label">Contraseña:</label></div>
-        <div><input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required></div>
+        <div><input type="password" class="form-control" id="contraseña" name="Password" required></div>
         <div><label for="pre" class="form-label">Pregunta:</label></div>
         <div><input list="Pre" class="form-control" name="Pre" placeholder="Para tu contraseña..." required>
             <datalist id="Pre">

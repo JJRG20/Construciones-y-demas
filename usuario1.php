@@ -19,7 +19,7 @@ $nom=$_SESSION['Nombre_us'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construcciones y demás</title>
     <link rel="shortcut icon" href="Img_página/Brick.png">
-    <link rel="stylesheet" href="sa55.css">
+    <link rel="stylesheet" href="estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
@@ -157,8 +157,14 @@ $nom=$_SESSION['Nombre_us'];
         <div><input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required></div>
         <div><label for="email" class="form-label">Email:</label></div>
         <div><input type="email" class="form-control" id="email" name="Email" required></div>
-        <div><label for="telefono" class="form-label">Teléfono:</label></div>
-        <div><input type="tel" class="form-control" id="telefono" name="Fono" placeholder="(+56) Número" required></div>
+        <div><label for="telefono" class="form-label">Teléfono:</label>
+            <input list="Cod" class="form-control" name="Cod" placeholder="Código" required>
+            <datalist id="Cod">
+                <option>+56</option>
+                
+            </datalist>
+        </div>
+        <div><input type="tel" class="form-control" id="telefono" name="Fono" placeholder="Número" required></div>
         <div><label for="direccion" class="form-label">Dirección:</label></div>
         <div><input type="text" class="form-control" id="direccion" name="Direccion" required></div>
         <div><label for="date" class="form-label">Fecha de nacimiento:</label></div>

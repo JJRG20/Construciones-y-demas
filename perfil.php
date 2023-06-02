@@ -23,7 +23,6 @@ $nom=$_SESSION['Nombre_us'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
-    
 </head>
 <body class="body">
     <div class="sticky-top">
@@ -60,7 +59,7 @@ $nom=$_SESSION['Nombre_us'];
                             <li>
                                 <?php
                                 if($nom){ ?>
-                                    <li><a class="nav-link blanco" aria-current="page" href="http://localhost/Consdemas/perfil.php"><?php echo $nom ?> </a></li>
+                                    <li><a class="nav-link blanco" aria-current="page" href="#"><?php echo $nom ?> </a></li>
                                 <?php } ?>
                                 
                             </li>
@@ -137,72 +136,25 @@ $nom=$_SESSION['Nombre_us'];
              
             </div>
         </div>
+    </div><br><br>
+    <h2>Mi perfil</h2><br>
+    <?php
+    if($nom){ ?>
+        <?php  echo $row['Nombre_us']?>
+    
+    <?php }
+    ?>
+    
+    <div class="card anuncio1">
+        <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">
+            <img src="Img_página/Elsword.png" class="card-img-top" alt="Elsword"></a>
+        <div class="card-body">
+            <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">Juega ahora</a>
+        </div>
     </div>
-    <div class="caja">
-        <div class="anuncio3">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="accion" src="Img_página/accion.jpg" alt="Acción"></a>
-        </div>
-        <div class="nosotros">
-            <p>Lo que nosotros buscamos es descubrir a nuevos constructores que quieran compartir su creatividad
-                con el mundo.<br><br>Siempre hemos tenido una fascinación por los juguetes de construcción, la
-                capacidad de hacer volar nuestra imaginación con lo que creamos, sin limitaciones, y poder
-                apreciar las creaciones de los demás.<br><br>Nuestro fundador tuvo la idea de crear este página web
-                con el objetivo de expandir el gusto por este arte.
-            </p>
-        </div>
-        <div class="card anuncio3">
-            <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">
-                <img src="Img_página/Elsword.png" class="card-img-top" alt="Elsword"></a>
-            <div class="card-body">
-                <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">Juega ahora</a>
-            </div>
-            <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">
-                <img src="Img_página/Elsword.png" class="card-img-top" alt="Elsword"></a>
-            <div class="card-body">
-                <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">Juega ahora</a>
-            </div>
-            <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">
-                <img src="Img_página/Elsword.png" class="card-img-top" alt="Elsword"></a>
-            <div class="card-body">
-                <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">Juega ahora</a>
-            </div>
-        </div>
-      
-    </div><br>
+    <br>
     
-    <div class="container car">
-        <div id="otro" class="row align-items-start">
-            <div>
-                <p class="black">Algunos ejemplos creativos:</p>
-            </div>
-            <div></div>
-            <div></div>
-            <div class="col d-flex justify-content-around">
-                <div>
-                    <img title="Abeja feliz" class="accion2" src="Img_página/ej1.jpg" alt="Abeja feliz">
-                    <p>Abeja feliz</p>
-                </div>
-                
-            </div>
-            <div class="col d-flex justify-content-around">
-                <div>
-                    <img title="Auto moderno" class="accion2" src="Img_página/ej2.jpg" alt="Auto moderno">
-                    <p>Auto moderno</p>
-                </div>
-                
-            </div>
-            <div class="col d-flex justify-content-around">
-                <div>
-                    <img title="Robot" class="accion2" src="Img_página/ej3.jpg" alt="Robot">
-                    <p>Robot</p>
-                </div>
-                
-            </div>
-            
-        </div><br>
-    </div>
-    
-    
+
     <footer class="footer">
         <div class="pie">
             <div></div>
@@ -214,7 +166,6 @@ $nom=$_SESSION['Nombre_us'];
     
         </div>
     </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>

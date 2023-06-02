@@ -38,7 +38,9 @@ $nom=$_SESSION['Nombre_us'];
                         <li>
                             <?php
                             if($nom){ ?>
-                                <li><a class="dropdown-item blanco" aria-current="page" href="logout.php">Cerrar sesión</a></li>
+                            
+                                <li><a class="dropdown-item blanco" aria-current="page" href="http://localhost/Consdemas/perfil.php">Mi perfil</a></li>
+
                             
                             <?php }else{ ?>
                                 <li>
@@ -60,7 +62,7 @@ $nom=$_SESSION['Nombre_us'];
                             <li>
                                 <?php
                                 if($nom){ ?>
-                                    <li><a class="nav-link blanco" aria-current="page" href="#"><?php echo $nom ?> </a></li>
+                                    <li><a class="nav-link blanco" aria-current="page" href="http://localhost/Consdemas/perfil.php"><?php echo $nom ?> </a></li>
                                 <?php } ?>
                                 
                             </li>

@@ -20,6 +20,7 @@ $nom=$_SESSION['Nombre_us'];
     <title>Construcciones y demás</title>
     <link rel="shortcut icon" href="Img_página/Brick.png">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
@@ -141,7 +142,7 @@ $nom=$_SESSION['Nombre_us'];
 
     <div class="perfil">
         <h2>Mi perfil</h2><br>
-        <div class="formy">
+        <div id="for3">
             
             <?php
             $sql="SELECT * FROM usuarios1 WHERE Nombre_us='$nom'";
@@ -149,10 +150,13 @@ $nom=$_SESSION['Nombre_us'];
             while($row=mysqli_fetch_array($query)){
                 ?>
                     
-                    
+                    <div class="my"><p>Nombre:</p></div>
                     <div class="my"><?php  echo $row['Nombre_us']?></div>
+                    <div class="my"><p>Correo:</p></div>
                     <div class="my"><?php  echo $row['Email']?></div>
+                    <div class="my"><p>Teléfono:</p></div>
                     <div class="my"><?php  echo $row['Fono']?></div>
+                    <div class="my"><p>Marca favorita:</p></div>
                     <div class="my"><?php  echo $row['Marca_fav']?></div>
                     <div><a href="actualiza1.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></div>
                     

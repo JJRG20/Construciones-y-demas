@@ -311,16 +311,7 @@
     background-color: gold;
     border: red 2px solid;
   }
-  #for3 {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 400px;
-    height: 635px;
-    background-color: gold;
-    border: red 2px solid;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
   .my{
     font-size: 150%;
     padding: 5px;

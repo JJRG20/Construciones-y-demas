@@ -22,7 +22,7 @@ $nom=$_SESSION['Nombre_us'];
     <title>Construcciones y demás</title>
     <link rel="shortcut icon" href="Img_página/Brick.png">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="estilo2.css">
+    <link rel="stylesheet" href="estilo3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">

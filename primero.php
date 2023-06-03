@@ -1,18 +1,10 @@
-<?php 
-session_start();
+<?php
 include("conexion1.php");
 $conexion=conectar();
 
-$num=$_GET['id'];
 
-$sql="SELECT * FROM usuarios1 WHERE Num='$num'";
-$query=mysqli_query($conexion,$sql);
-
-$row=mysqli_fetch_array($query);
 error_reporting(0);
-$nom=$_SESSION['Nombre_us'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +14,12 @@ $nom=$_SESSION['Nombre_us'];
     <title>Construcciones y demás</title>
     <link rel="shortcut icon" href="Img_página/Brick.png">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="estilo3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
     
+    
+
 </head>
 <body class="body">
     <div class="sticky-top">
@@ -41,7 +34,7 @@ $nom=$_SESSION['Nombre_us'];
                         <li>
                             <?php
                             if($nom){ ?>
-                                <li><a class="dropdown-item blanco" aria-current="page" href="http://localhost/Consdemas/perfil.php">Mi perfil</a></li>
+                                <li><a class="dropdown-item blanco" aria-current="page" href="logout.php">Cerrar sesión</a></li>
                             
                             <?php }else{ ?>
                                 <li>
@@ -63,7 +56,7 @@ $nom=$_SESSION['Nombre_us'];
                             <li>
                                 <?php
                                 if($nom){ ?>
-                                    <li><a class="nav-link yo" aria-current="page" href="http://localhost/Consdemas/perfil.php"><?php echo $nom ?> </a></li>
+                                    <li><a class="nav-link blanco" aria-current="page" href="#"><?php echo $nom ?> </a></li>
                                 <?php } ?>
                                 
                             </li>
@@ -120,10 +113,10 @@ $nom=$_SESSION['Nombre_us'];
                             
                             <div class="mb-3">
                                 <label for="contraseña" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="contraseña" name="Password" required>
+                                <input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required>
                             </div>
                             
-                            <div><a href="http://localhost/Consdemas/primero.php">¿Olvidó su contraseña?</a></div>
+                            <div><a href="#">¿Olvidó su contraseña?</a></div>
                             
                             <div class="mb-3 form-check">
                                 <input type="checkbox" id="checkbox">
@@ -141,46 +134,9 @@ $nom=$_SESSION['Nombre_us'];
             </div>
         </div>
     </div>
-
-    <div class="container mt-5">
-        <form action="up2.php" id="for4" method="POST">
-        
-                    <input type="hidden" name="Num" value="<?php echo $row['Num']  ?>">
-                    
-                    <input type="text" class="form-control mb-3" name="Nombres" placeholder="Nombres" value="<?php echo $row['Nombres']  ?>" required>
-                    <input type="text" class="form-control mb-3" name="Apellidos" placeholder="Apellidos" value="<?php echo $row['Apellidos']  ?>" required>
-                    <input type="text" class="form-control mb-3" name="Nombre_us" placeholder="Nombre de usuario" value="<?php echo $row['Nombre_us']  ?>" required>
-                    <input type="password" class="form-control mb-3" name="Password" placeholder="Contraseña" value="<?php echo $row['Password']  ?>" required>
-                    <input type="text" class="form-control mb-3" name="Email" placeholder="Email" value="<?php echo $row['Email']  ?>" required>
-                    <div><input list="Pre" class="form-control mb-3" name="Pre" placeholder="Para tu contraseña..." value="<?php echo $row['Pre']  ?>" required>
-                        <datalist id="Pre">
-                            <option>¿Cuál es tu comida favorita?</option>
-                            <option>¿Cuál es el nombre de tu mascota?</option>
-                            <option>¿Cuál es tu película favorita?</option>
-                        </datalist>
-                    </div>
-                    <input type="text" class="form-control mb-3" name="Res" placeholder="Respuesta" value="<?php echo $row['Res']  ?>" required>
-                    <input type="tel" class="form-control mb-3" name="Fono" placeholder="Teléfono" value="<?php echo $row['Fono']  ?>" required>
-                    <input type="text" class="form-control mb-3" name="Direccion" placeholder="Dirección" value="<?php echo $row['Direccion']  ?>" required>
-                    <input type="date" class="form-control mb-3" name="Fecha_nac" placeholder="Fecha de nacimiento" value="<?php echo $row['Fecha_nac']  ?>" required>
-                    <input list="Sexo" class="form-control mb-3" name="Sexo" placeholder="Sexo" value="<?php echo $row['Sexo']  ?>" required>
-                        <datalist id="Sexo">
-                            <option>Masculino</option>
-                            <option>Femenino</option>
-                            <option>Otro</option>
-                        </datalist>
-                    <input list="Marca" class="form-control mb-3" name="Marca_fav" placeholder="Marca favorita" value="<?php echo $row['Marca_fav']  ?>" required>
-                        <datalist id="Marca">
-                            <option>Lego</option>
-                            <option>Megablox</option>
-                            <option>Kre-o</option>
-                            <option>Otra</option>
-                        </datalist>
-            <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
-            <a href="http://localhost/Consdemas/perfil.php"><input type="button" class="btn btn-danger btn-block" value="Cancelar"></a>
-        </form>
-        
-    </div><br>ç<br>
+    
+    <br><br>
+    
     <div class="card anuncio1">
         <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">
             <img src="Img_página/Elsword.png" class="card-img-top" alt="Elsword"></a>
@@ -190,7 +146,6 @@ $nom=$_SESSION['Nombre_us'];
     </div>
     <br>
     
-
     <footer class="footer">
         <div class="pie">
             <div></div>

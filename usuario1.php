@@ -122,7 +122,7 @@ $nom=$_SESSION['Nombre_us'];
                                 <input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required>
                             </div>
                             
-                            <div><a href="#">¿Olvidó su contraseña?</a></div>
+                            <div><a href="http://localhost/Consdemas/primero.php">¿Olvidó su contraseña?</a></div>
                             
                             <div class="mb-3 form-check">
                                 <input type="checkbox" id="checkbox">

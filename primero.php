@@ -1,8 +1,11 @@
 <?php
+session_start();
 include("conexion1.php");
 $conexion=conectar();
+$sql="SELECT * FROM usuarios1";
+$query=mysqli_query($conexion,$sql);
 
-
+$row=mysqli_fetch_array($query);
 error_reporting(0);
 ?>
 <!DOCTYPE html>
@@ -142,56 +145,47 @@ error_reporting(0);
             
                 
                 
-            <label> Ingrese su correo:</label>
-            <input type="email" name="Email">
+            <input type="email" class="form-control mb-3" id="email" name="Email" placeholder="Tu correo" required>
+            <input list="Pre" class="form-control mb-3" name="Pre" placeholder="Tu pregunta" required>
+            <datalist id="Pre">
+                <option>¿Cuál es tu comida favorita?</option>
+                <option>¿Cuál es el nombre de tu mascota?</option>
+                <option>¿Cuál es tu película favorita?</option>
+            </datalist>
+            <input type="text" class="form-control mb-3" id="res" name="Res" placeholder="Tu respuesta" required>
         
-        
-            <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+            <input class="bb btn btn-danger" type="submit" name="enviar" value="Enviar">
                 
                 
             
-        </div>
+        </div><br>
         <div>
             <?php
             if(isset($_POST['enviar'])){
                 $email=$_POST['Email'];
+                $pre=$_POST['Pre'];
+                $res=$_POST['Res'];
                 
-                if(empty($_POST['Email'])){
-                    print("No hay resultados");
-                }else{
-                    
-                    if(!empty($_POST['Email'])){
-                        $sql="SELECT * FROM usuarios1 WHERE Email like '%".$email."%'";
-                    }
+                if(!empty($_POST['Email'])){
+                    $sql="SELECT * FROM usuarios1 WHERE Email like '%".$email."%' and Pre like '%".$pre."%' and Res like '%".$res."%'";
                 }
                 $query=mysqli_query($conexion,$sql);
                 while($row=mysqli_fetch_array($query)){
                 ?>
                     <tr>
-                        <td><?php  echo $row['Num']?></td>
-                        <td><?php  echo $row['Nombres']?></td>
-                        <td><?php  echo $row['Apellidos']?></td>
-                        <td><?php  echo $row['Nombre_us']?></td>
+                        <td>Tu contraseña es... </td>
                         <td><?php  echo $row['Password']?></td>
-                        <td><?php  echo $row['Email']?></td> 
-                        <td><?php  echo $row['Fono']?></td>
-                        <td><?php  echo $row['Direccion']?></td>
-                        <td><?php  echo date("d-m-Y",strtotime($row['Fecha_nac']));?></td>
-                        <td><?php  echo $row['Sexo']?></td>
-                        <td><?php  echo $row['Marca_fav']?></td> 
-                        <td><?php  echo $row['adm']?></td> 
-                        <td><a href="actualiza1.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></td>
-                        <td><a href="borrar1.php?id=<?php echo $row['Num'] ?>" onclick="return seguro()" class="btn btn-danger">Eliminar</a></td>
-
                     </tr>
+                    
                 <?php 
                 }
             }
             ?>
         </div>
-            
+        
         
     </form>
+    
     
     <br><br>
     

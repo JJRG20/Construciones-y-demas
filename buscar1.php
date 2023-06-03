@@ -27,9 +27,7 @@ $nom=$_SESSION['Nombre_us'];
 <body>
     <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
         <table>
-            <tr>
-                <h1> <?php  echo $row['Nombre_us']?></h1>
-            </tr>
+            <tr><h1>Buscador</h1></tr>
             <tr>
                 <td>
                     <label>Id:</label>

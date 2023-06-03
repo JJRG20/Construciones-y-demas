@@ -1,8 +1,13 @@
 <?php
-
+session_start();
 include("conexion1.php");
 $conexion=conectar();
+$sql="SELECT * FROM usuarios1";
+$query=mysqli_query($conexion,$sql);
 
+$row=mysqli_fetch_array($query);
+error_reporting(0);
+$nom=$_SESSION['Nombre_us'];
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +28,7 @@ $conexion=conectar();
     <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
         <table>
             <tr>
-                <th colspan="5"><h1>Buscador</h1></th>
+                <h1> <?php  echo $row['Nombre_us']?></h1>
             </tr>
             <tr>
                 <td>
@@ -39,6 +44,9 @@ $conexion=conectar();
                 </td>
                 <td>
                     <a href="http://localhost/Consdemas/buscar1.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+                </td>
+                <td>
+                    <a href="http://localhost/Consdemas/perfil.php" class="bb btn btn-primary justify-content-end">Volver</a>
                 </td>
             </tr>
         </table>
@@ -68,7 +76,7 @@ $conexion=conectar();
                 $usuario=$_POST['Nombre_us'];
                 $num=$_POST['Num'];
                 if(empty($_POST['Nombre_us']) && empty($_POST['Num'])){
-                    Header("Location: buscar1.php");
+                    $sql="SELECT * FROM usuarios1 WHERE Num=".$num;
                 }else{
                     if(empty($_POST['Nombre_us'])){
                         $sql="SELECT * FROM usuarios1 WHERE Num=".$num;

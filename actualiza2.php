@@ -143,7 +143,7 @@ $nom=$_SESSION['Nombre_us'];
     </div>
 
     <div class="container mt-5">
-        <form action="up1.php" id="for4" method="POST">
+        <form action="up2.php" id="for4" method="POST">
         
                     <input type="hidden" name="Num" value="<?php echo $row['Num']  ?>">
                     

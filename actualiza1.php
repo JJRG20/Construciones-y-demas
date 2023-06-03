@@ -26,21 +26,29 @@ $row=mysqli_fetch_array($query);
                     
                                 <input type="hidden" name="Num" value="<?php echo $row['Num']  ?>">
                                 
-                                <input type="text" class="form-control mb-3" name="Nombres" placeholder="Nombres" value="<?php echo $row['Nombres']  ?>">
-                                <input type="text" class="form-control mb-3" name="Apellidos" placeholder="Apellidos" value="<?php echo $row['Apellidos']  ?>">
-                                <input type="text" class="form-control mb-3" name="Nombre_us" placeholder="Nombre de usuario" value="<?php echo $row['Nombre_us']  ?>">
-                                <input type="password" class="form-control mb-3" name="Password" placeholder="Contraseña" value="<?php echo $row['Password']  ?>">
-                                <input type="email" class="form-control mb-3" name="Email" placeholder="Email" value="<?php echo $row['Email']  ?>">
-                                <input type="tel" class="form-control mb-3" name="Fono" placeholder="Teléfono" value="<?php echo $row['Fono']  ?>">
-                                <input type="text" class="form-control mb-3" name="Direccion" placeholder="Dirección" value="<?php echo $row['Direccion']  ?>">
-                                <input type="date" class="form-control mb-3" name="Fecha_nac" placeholder="Fecha de nacimiento" value="<?php echo $row['Fecha_nac']  ?>">
-                                <input list="Sexo" class="form-control mb-3" name="Sexo" placeholder="Sexo" value="<?php echo $row['Sexo']  ?>">
+                                <input type="text" class="form-control mb-3" name="Nombres" placeholder="Nombres" value="<?php echo $row['Nombres']  ?>" required>
+                                <input type="text" class="form-control mb-3" name="Apellidos" placeholder="Apellidos" value="<?php echo $row['Apellidos']  ?>" required>
+                                <input type="text" class="form-control mb-3" name="Nombre_us" placeholder="Nombre de usuario" value="<?php echo $row['Nombre_us']  ?>" required>
+                                <input type="password" class="form-control mb-3" name="Password" placeholder="Contraseña" value="<?php echo $row['Password']  ?>" required>
+                                <input type="text" class="form-control mb-3" name="Email" placeholder="Email" value="<?php echo $row['Email']  ?>" required>
+                                <div><input list="Pre" class="form-control mb-3" name="Pre" placeholder="Para tu contraseña..." value="<?php echo $row['Pre']  ?>" required>
+                                    <datalist id="Pre">
+                                        <option>¿Cuál es tu comida favorita?</option>
+                                        <option>¿Cuál es el nombre de tu mascota?</option>
+                                        <option>¿Cuál es tu película favorita?</option>
+                                    </datalist>
+                                </div>
+                                <input type="text" class="form-control mb-3" name="Res" placeholder="Respuesta" value="<?php echo $row['Res']  ?>" required>
+                                <input type="tel" class="form-control mb-3" name="Fono" placeholder="Teléfono" value="<?php echo $row['Fono']  ?>" required>
+                                <input type="text" class="form-control mb-3" name="Direccion" placeholder="Dirección" value="<?php echo $row['Direccion']  ?>" required>
+                                <input type="date" class="form-control mb-3" name="Fecha_nac" placeholder="Fecha de nacimiento" value="<?php echo $row['Fecha_nac']  ?>" required>
+                                <input list="Sexo" class="form-control mb-3" name="Sexo" placeholder="Sexo" value="<?php echo $row['Sexo']  ?>" required>
                                     <datalist id="Sexo">
                                         <option>Masculino</option>
                                         <option>Femenino</option>
                                         <option>Otro</option>
                                     </datalist>
-                                <input list="Marca" class="form-control mb-3" name="Marca_fav" placeholder="Marca favorita" value="<?php echo $row['Marca_fav']  ?>">
+                                <input list="Marca" class="form-control mb-3" name="Marca_fav" placeholder="Marca favorita" value="<?php echo $row['Marca_fav']  ?>" required>
                                     <datalist id="Marca">
                                         <option>Lego</option>
                                         <option>Megablox</option>

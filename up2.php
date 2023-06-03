@@ -23,6 +23,6 @@ $sql="UPDATE usuarios1 SET Nombres='$nombres',Apellidos='$apellidos',Nombre_us='
 $query=mysqli_query($conexion,$sql);
 
     if($query){
-        Header("Location: buscar1.php");
+        Header("Location: perfil.php");
     }
 ?>

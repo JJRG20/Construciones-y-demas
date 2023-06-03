@@ -143,7 +143,7 @@ error_reporting(0);
                 
                 
             <label> Nombre de usuario:</label>
-            <input class="mb-3" type="text" name="Nombre_us">
+            <input type="text" name="Nombre_us">
         
         
             <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">

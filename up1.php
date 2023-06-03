@@ -16,10 +16,11 @@ $direccion=$_POST['Direccion'];
 $fecha=$_POST['Fecha_nac'];
 $sexo=$_POST['Sexo'];
 $marca=$_POST['Marca_fav'];
+$adm=$_POST['adm'];
 
 
 
-$sql="UPDATE usuarios1 SET Nombres='$nombres',Apellidos='$apellidos',Nombre_us='$usuario',Password='$password',Pre='$pre',Res='$res',Email='$email',Fono='$fono',Direccion='$direccion',Fecha_nac='$fecha',Sexo='$sexo',Marca_fav='$marca' WHERE Num='$num'";
+$sql="UPDATE usuarios1 SET Nombres='$nombres',Apellidos='$apellidos',Nombre_us='$usuario',Password='$password',Pre='$pre',Res='$res',Email='$email',Fono='$fono',Direccion='$direccion',Fecha_nac='$fecha',Sexo='$sexo',Marca_fav='$marca',adm='$adm' WHERE Num='$num'";
 $query=mysqli_query($conexion,$sql);
 
     if($query){

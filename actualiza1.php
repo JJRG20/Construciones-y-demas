@@ -55,6 +55,7 @@ $row=mysqli_fetch_array($query);
                                         <option>Kre-o</option>
                                         <option>Otra</option>
                                     </datalist>
+                                <input type="number" class="form-control mb-3" name="adm" placeholder="Administrador" value="<?php echo $row['adm']  ?>" required>
                         <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                         <a href="http://localhost/Consdemas/buscar1.php"><input type="button" class="btn btn-danger btn-block" value="Cancelar"></a>
                     </form>

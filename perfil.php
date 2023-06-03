@@ -159,12 +159,14 @@ $nom=$_SESSION['Nombre_us'];
                     <div class="my"><p>Marca favorita:</p></div>
                     <div class="my"><?php  echo $row['Marca_fav']?></div>
                     <div>
+                        
+                    </div>
+                    <div class="ri"><a href="actualiza2.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a>
                         <?php
                         if($row['adm']==1){ ?>
-                            <a href="buscar1.php" class="btn btn-info">Usuarios</a>
+                            <a href="buscar1.php" class="btn btn-dark">Usuarios</a>
                         <?php } ?>
                     </div>
-                    <div class="ri"><a href="actualiza2.php?id=<?php echo $row['Num'] ?>" class="btn btn-info">Editar</a></div>
                     
 
                     

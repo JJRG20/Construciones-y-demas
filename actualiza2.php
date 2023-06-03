@@ -177,6 +177,7 @@ $nom=$_SESSION['Nombre_us'];
                             <option>Otra</option>
                         </datalist>
             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
+            <a href="http://localhost/Consdemas/perfil.php"><input type="button" class="btn btn-danger btn-block" value="Cancelar"></a>
         </form>
         
     </div><br>ç<br>

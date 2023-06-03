@@ -14,6 +14,7 @@ error_reporting(0);
     <title>Construcciones y demás</title>
     <link rel="shortcut icon" href="Img_página/Brick.png">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo4.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
@@ -116,7 +117,7 @@ error_reporting(0);
                                 <input type="password" class="form-control" id="contraseña" name="Password" minlength="8" required>
                             </div>
                             
-                            <div><a href="#">¿Olvidó su contraseña?</a></div>
+                            <div><a href="http://localhost/Consdemas/primero.php">¿Olvidó su contraseña?</a></div>
                             
                             <div class="mb-3 form-check">
                                 <input type="checkbox" id="checkbox">
@@ -134,6 +135,25 @@ error_reporting(0);
             </div>
         </div>
     </div>
+    <br><br>
+    <form id="for4" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+        <div>
+            <h2>Buscador</h2>
+            
+                
+                
+            <label> Nombre de usuario:</label>
+            <input class="mb-3" type="text" name="Nombre_us">
+        
+        
+            <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+                
+                
+            
+        </div>
+            
+        
+    </form>
     
     <br><br>
     

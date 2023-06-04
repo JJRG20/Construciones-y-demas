@@ -144,7 +144,7 @@ $nom=$_SESSION['Nombre_us'];
     </div>
     <br><br>
     <div id="for4">
-        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+        <form  method="POST">
             <div>
                 <input type="hidden" name="Email" value="<?php echo $row['Email']  ?>">
                 <?php  echo $row['Nombre_us']?>,

@@ -1,11 +1,10 @@
-<?php
-session_start();
-include("conexion1.php");
-$conexion=conectar();
+<?php 
+    include("conexion1.php");
+    $conexion=conectar();
 
 $email=$_GET['id'];
 
-$sql="SELECT * FROM usuarios1";
+$sql="SELECT * FROM usuarios1 WHERE Email like '$email'";
 $query=mysqli_query($conexion,$sql);
 
 $row=mysqli_fetch_array($query);
@@ -142,12 +141,15 @@ error_reporting(0);
         </div>
     </div>
     <br><br>
-
-    <div id="for4">
-        <input type="hidden" name="Email" value="<?php echo $row['Email']  ?>">
-        <td><?php  echo $row['Nombre_us']?></td>
-    </div>
-
+    <form id="for4" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+        <div>
+            <input type="hidden" name="Email" value="<?php echo $row['Email']  ?>">
+            <?php  echo $row['Nombre_us']?>,
+            <?php  echo $row['Pre']?>
+            <input type="text" id="res" name="Res" required>
+            <input class="bb btn btn-danger" type="submit" name="go" value="Enviar">
+        </div>
+    </form>
     <br><br>
     
     <div class="card anuncio1">

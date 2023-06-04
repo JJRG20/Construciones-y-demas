@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include("conexion1.php");
 $conexion=conectar();
 $sql="SELECT * FROM usuarios1";
@@ -139,32 +139,36 @@ error_reporting(0);
         </div>
     </div>
     <br><br>
-    <form id="for4" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-        <div>
-            <h2>Escriba su correo electrónico</h2>
-            
+    <div id="for4">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+            <div>
+                <h2>Escriba su correo electrónico</h2>
+                
+                    
+                    
+                <input type="email" class="form-control mb-3" name="Email" placeholder="Tu correo">
                 
                 
-            <input type="email" class="form-control mb-3" id="email" name="Email" placeholder="Tu correo">
             
-            
+                <input class="bb btn btn-danger" type="submit" name="enviar" value="Enviar">
+                    
+                    
+                
+            </div>
+        </form><br>
         
-            <input class="bb btn btn-danger" type="submit" name="enviar" value="Enviar">
-                
-                
-            
-        </div><br>
         <div>
             <?php
             if(isset($_POST['enviar'])){
                 $email=$_POST['Email'];
                 
-                
-                if(!empty($_POST['Email'])){
+                if(empty($_POST['Email'])){
                     $sql="SELECT * FROM usuarios1 WHERE Email like '$email'";
-                }
-                else{
-                    $sql="SELECT * FROM usuarios1 WHERE Email like '$email'";
+                }else{
+                    
+                    if(!empty($_POST['Email'])){
+                        $sql="SELECT * FROM usuarios1 WHERE Email like '$email'";
+                    }
                 }
                 $query=mysqli_query($conexion,$sql);
                 while($row=mysqli_fetch_array($query)){
@@ -172,17 +176,21 @@ error_reporting(0);
                     <tr>
                         
                         <td><?php  echo $row['Nombre_us']?></td>
-                        <td><a href="segundo.php?id=<?php echo $row['Email'] ?>" class="btn btn-info">Hacer la pregunta</a></td>
+                        
+                        <td><a href="segundo.php?id=<?php echo $row['Email'] ?>" class="btn btn-info">Hacer pregunta</a></td>
+
                     </tr>
-                    
                 <?php 
                 }
+            
             }
             ?>
         </div>
+    </div>
+    
         
         
-    </form>
+    
     
     
     <br><br>

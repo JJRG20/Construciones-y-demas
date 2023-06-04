@@ -180,7 +180,7 @@ $nom=$_SESSION['Nombre_us'];
             <a href="http://localhost/Consdemas/perfil.php"><input type="button" class="btn btn-danger btn-block" value="Cancelar"></a>
         </form>
         
-    </div><br>ç<br>
+    </div><br><br>
     <div class="card anuncio1">
         <a href="https://register.koggames.com/elswordonline?site=googledisplaylatam&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_APO-7XPblBKRo3lHvHcaxc90dGrDEiN-LQi9ED9gTmBOaMV5DQ6oaAm-HEALw_wcB">
             <img src="Img_página/Elsword.png" class="card-img-top" alt="Elsword"></a>

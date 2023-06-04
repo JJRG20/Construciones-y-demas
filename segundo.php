@@ -1,6 +1,7 @@
 <?php 
-    include("conexion1.php");
-    $conexion=conectar();
+session_start();
+include("conexion1.php");
+$conexion=conectar();
 
 $email=$_GET['id'];
 
@@ -9,6 +10,7 @@ $query=mysqli_query($conexion,$sql);
 
 $row=mysqli_fetch_array($query);
 error_reporting(0);
+$nom=$_SESSION['Nombre_us'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -141,15 +143,47 @@ error_reporting(0);
         </div>
     </div>
     <br><br>
-    <form id="for4" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+    <div id="for4">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+            <div>
+                <input type="hidden" name="Email" value="<?php echo $row['Email']  ?>">
+                <?php  echo $row['Nombre_us']?>,
+                <?php  echo $row['Pre']?>
+                <input type="text" id="res" name="Res" required>
+                <input class="bb btn btn-danger" type="submit" name="go" value="Enviar">
+            </div>
+        </form>
         <div>
-            <input type="hidden" name="Email" value="<?php echo $row['Email']  ?>">
-            <?php  echo $row['Nombre_us']?>,
-            <?php  echo $row['Pre']?>
-            <input type="text" id="res" name="Res" required>
-            <input class="bb btn btn-danger" type="submit" name="go" value="Enviar">
+            <?php
+            if(isset($_POST['go'])){
+                $res=$_POST['Res'];
+                
+                if(empty($_POST['Res'])){
+                    $sql="SELECT * FROM usuarios1 WHERE Res like '$res'";
+                }else{
+                    
+                    if(!empty($_POST['Res'])){
+                        $sql="SELECT * FROM usuarios1 WHERE Res like '$res'";
+                    }
+                }
+                $query=mysqli_query($conexion,$sql);
+                while($row=mysqli_fetch_array($query)){
+                ?>
+                    <tr>
+                        <td>Tu contraseña es... </td>
+                        <td><?php  echo $row['Password']?></td>
+                        
+                        
+
+                    </tr>
+                <?php 
+                }
+            
+            }
+            ?>
         </div>
-    </form>
+    </div>
+    
     <br><br>
     
     <div class="card anuncio1">

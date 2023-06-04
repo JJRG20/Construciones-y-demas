@@ -174,7 +174,7 @@ error_reporting(0);
                 while($row=mysqli_fetch_array($query)){
                 ?>
                     <tr>
-                        
+                        <td>Nombre: </td>
                         <td><?php  echo $row['Nombre_us']?></td>
                         
                         <td><a href="segundo.php?id=<?php echo $row['Email'] ?>" class="btn btn-info">Hacer pregunta</a></td>

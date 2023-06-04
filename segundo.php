@@ -147,23 +147,24 @@ $nom=$_SESSION['Nombre_us'];
         <form  method="POST">
             <div>
                 <input type="hidden" name="Email" value="<?php echo $row['Email']  ?>">
-                <?php  echo $row['Nombre_us']?>,
+                
                 <?php  echo $row['Pre']?>
-                <input type="text" id="res" name="Res" required>
+                <input type="text" class="form-control mb-3" name="Res">
                 <input class="bb btn btn-danger" type="submit" name="go" value="Enviar">
             </div>
-        </form>
+        </form><br><br>
         <div>
             <?php
             if(isset($_POST['go'])){
+                $usuario=$_POST['Nombre_us'];
                 $res=$_POST['Res'];
-                
+                $pre=$row['Pre'];
                 if(empty($_POST['Res'])){
-                    $sql="SELECT * FROM usuarios1 WHERE Res like '$res'";
+                    $sql="SELECT * FROM usuarios1 WHERE Pre like '$pre' and Res like '$res'";
                 }else{
                     
                     if(!empty($_POST['Res'])){
-                        $sql="SELECT * FROM usuarios1 WHERE Res like '$res'";
+                        $sql="SELECT * FROM usuarios1 WHERE Pre like '$pre' and Res like '$res'";
                     }
                 }
                 $query=mysqli_query($conexion,$sql);
@@ -174,6 +175,7 @@ $nom=$_SESSION['Nombre_us'];
                         <td><?php  echo $row['Password']?></td>
                         
                         
+                        
 
                     </tr>
                 <?php 
@@ -181,7 +183,8 @@ $nom=$_SESSION['Nombre_us'];
             
             }
             ?>
-        </div>
+        </div><br>
+        <a class="btn btn-info" href="http://localhost/Consdemas/index.php">Volver al inicio</a>
     </div>
     
     <br><br>

@@ -141,18 +141,13 @@ error_reporting(0);
     <br><br>
     <form id="for4" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
         <div>
-            <h2>Buscador</h2>
+            <h2>Escriba su correo electrónico</h2>
             
                 
                 
-            <input type="email" class="form-control mb-3" id="email" name="Email" placeholder="Tu correo" required>
-            <input list="Pre" class="form-control mb-3" name="Pre" placeholder="Tu pregunta" required>
-            <datalist id="Pre">
-                <option>¿Cuál es tu comida favorita?</option>
-                <option>¿Cuál es el nombre de tu mascota?</option>
-                <option>¿Cuál es tu película favorita?</option>
-            </datalist>
-            <input type="text" class="form-control mb-3" id="res" name="Res" placeholder="Tu respuesta" required>
+            <input type="email" class="form-control mb-3" id="email" name="Email" placeholder="Tu correo">
+            
+            
         
             <input class="bb btn btn-danger" type="submit" name="enviar" value="Enviar">
                 
@@ -163,18 +158,21 @@ error_reporting(0);
             <?php
             if(isset($_POST['enviar'])){
                 $email=$_POST['Email'];
-                $pre=$_POST['Pre'];
-                $res=$_POST['Res'];
+                
                 
                 if(!empty($_POST['Email'])){
-                    $sql="SELECT * FROM usuarios1 WHERE Email like '%".$email."%' and Pre like '%".$pre."%' and Res like '%".$res."%'";
+                    $sql="SELECT * FROM usuarios1 WHERE Email like '$email'";
+                }
+                else{
+                    $sql="SELECT * FROM usuarios1 WHERE Email like '$email'";
                 }
                 $query=mysqli_query($conexion,$sql);
                 while($row=mysqli_fetch_array($query)){
                 ?>
                     <tr>
-                        <td>Tu contraseña es... </td>
-                        <td><?php  echo $row['Password']?></td>
+                        
+                        <td><?php  echo $row['Nombre_us']?></td>
+                        <td></td>
                     </tr>
                     
                 <?php 

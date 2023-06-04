@@ -172,7 +172,7 @@ error_reporting(0);
                     <tr>
                         
                         <td><?php  echo $row['Nombre_us']?></td>
-                        <td></td>
+                        <td><a href="segundo.php?id=<?php echo $row['Email'] ?>" class="btn btn-info">Hacer la pregunta</a></td>
                     </tr>
                     
                 <?php 

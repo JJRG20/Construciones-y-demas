@@ -2,6 +2,9 @@
 session_start();
 include("conexion1.php");
 $conexion=conectar();
+
+$email=$_GET['id'];
+
 $sql="SELECT * FROM usuarios1";
 $query=mysqli_query($conexion,$sql);
 
@@ -140,6 +143,10 @@ error_reporting(0);
     </div>
     <br><br>
 
+    <div id="for4">
+        <input type="hidden" name="Email" value="<?php echo $row['Email']  ?>">
+        <td><?php  echo $row['Nombre_us']?></td>
+    </div>
 
     <br><br>
     

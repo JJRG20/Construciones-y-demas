@@ -156,15 +156,15 @@ $nom=$_SESSION['Nombre_us'];
         <div>
             <?php
             if(isset($_POST['go'])){
-                $usuario=$_POST['Nombre_us'];
+                $usuario=$row['Nombre_us'];
                 $res=$_POST['Res'];
                 $pre=$row['Pre'];
                 if(empty($_POST['Res'])){
-                    $sql="SELECT * FROM usuarios1 WHERE Pre like '$pre' and Res like '$res'";
+                    $sql="SELECT * FROM usuarios1 WHERE Pre like '$pre' and Res like '$res' and Nombre_us like '$usuario'";
                 }else{
                     
                     if(!empty($_POST['Res'])){
-                        $sql="SELECT * FROM usuarios1 WHERE Pre like '$pre' and Res like '$res'";
+                        $sql="SELECT * FROM usuarios1 WHERE Pre like '$pre' and Res like '$res' and Nombre_us like '$usuario'";
                     }
                 }
                 $query=mysqli_query($conexion,$sql);
